@@ -23,6 +23,13 @@ defmodule Cards do
     # Cards.shuffle(deck)
     # deck var will still be the same as ["Ace","Two","Three"] just using shuffle won't modify the deck variable, this is callED IMMUTABILITY
   end
+@doc """
+  Determines whether a deck contains a given card
+  ## Example
+    iex> deck = Cards.create_deck
+    iex> Cards.contains?(deck, "Ace of Spade")
+    true
+"""
   def contains?(deck, card) do
     Enum.member?(deck, card)
     # iex(1)> deck = Cards.create_deck
@@ -40,7 +47,7 @@ defmodule Cards do
     iex> deck = Cards.create_deck
     iex> {hand,deck} = Cards.deal(deck, 1)
     iex> hand
-    ["Ace of Spades"]
+    ["Ace of Spade"]
 """
   def deal(deck, hand_size) do
      Enum.split(deck, hand_size)
