@@ -81,4 +81,8 @@ defmodule Cards do
       #  "Three of Dimonds", "Four of Dimonds",
       #  "Five of Dimonds"]
   end
+  def save(deck, filename)do
+    binary = :erlang.term_to_binary(deck)
+    File.write(filename, binary)
+  end
 end
