@@ -94,9 +94,10 @@ defmodule Cards do
     #  iex(25)> Cards.load('wrong_file') 
     # "That file does not exist"
   end
-  def create_hande(hand_size) do
-    deck = Cards.create_deck
-    deck = Cards.shell(deck)
-    hand = Cards.deal(deck, hand_size)
+  def create_hand(hand_size) do
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+    # Cards.create_hand(5)
   end
 end
