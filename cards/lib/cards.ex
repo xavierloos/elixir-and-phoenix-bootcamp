@@ -39,4 +39,19 @@ defmodule Cards do
     # iex(3)> Cards.contains?(deck,"Nine") 
     # false
   end
+  def deal(deck, hand_size) do
+     Enum.split(deck, hand_size)
+      # iex(16)> Cards.deal(deck, 3)
+      # {["Ace of Spade", "Two of Spade",
+      #   "Three of Spade"],
+      #  ["Four of Spade", "Five of Spade",
+      # "Ace of Clubs", "Two of Clubs",
+      # "Three of Clubs", "Four of Clubs",
+      # "Five of Clubs", "Ace of Hearts",
+      # "Two of Hearts", "Three of Hearts",
+      # "Four of Hearts", "Five of Hearts",
+      # "Ace of Dimonds", "Two of Dimonds",
+      # "Three of Dimonds", "Four of Dimonds",
+      # "Five of Dimonds"]}
+  end
 end
