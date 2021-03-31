@@ -53,5 +53,32 @@ defmodule Cards do
       # "Ace of Dimonds", "Two of Dimonds",
       # "Three of Dimonds", "Four of Dimonds",
       # "Five of Dimonds"]}
+
+      # PATHER MATCHING
+      # iex(17)> {hand, rest_of_deck}=Cards.deal(deck,5)
+      # {["Ace of Spade", "Two of Spade",
+      #   "Three of Spade", "Four of Spade",
+      #   "Five of Spade"],
+      #  ["Ace of Clubs", "Two of Clubs",
+      #   "Three of Clubs", "Four of Clubs",
+      #   "Five of Clubs", "Ace of Hearts",
+      #   "Two of Hearts", "Three of Hearts",
+      #   "Four of Hearts", "Five of Hearts",
+      #   "Ace of Dimonds", "Two of Dimonds",
+      #   "Three of Dimonds", "Four of Dimonds",
+      #   "Five of Dimonds"]}
+      # iex(18)> hand
+      # ["Ace of Spade", "Two of Spade",
+      #  "Three of Spade", "Four of Spade",
+      #  "Five of Spade"]
+      # iex(19)> rest_of_deck
+      # ["Ace of Clubs", "Two of Clubs",
+      #  "Three of Clubs", "Four of Clubs",
+      #  "Five of Clubs", "Ace of Hearts",
+      #  "Two of Hearts", "Three of Hearts",
+      #  "Four of Hearts", "Five of Hearts",
+      #  "Ace of Dimonds", "Two of Dimonds",
+      #  "Three of Dimonds", "Four of Dimonds",
+      #  "Five of Dimonds"]
   end
 end
