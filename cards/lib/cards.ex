@@ -16,6 +16,9 @@ defmodule Cards do
     ["Ace","Two","Three"]
   end
   def shuffle(deck) do
-    
+    Enum.shuffle(deck)
+    # in the shell
+    # deck = Cards.create_deck
+    # Cards.shuffle(deck)
   end
 end
