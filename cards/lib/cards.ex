@@ -22,4 +22,13 @@ defmodule Cards do
     # Cards.shuffle(deck)
     # deck var will still be the same as ["Ace","Two","Three"] just using shuffle won't modify the deck variable, this is callED IMMUTABILITY
   end
+  def contains?(deck, card) do
+    Enum.member?(deck, card)
+    # iex(1)> deck = Cards.create_deck
+    # ["Ace", "Two", "Three"]
+    # iex(2)> Cards.contains?(deck,"Two")
+    # true
+    # iex(3)> Cards.contains?(deck,"Nine") 
+    # false
+  end
 end
