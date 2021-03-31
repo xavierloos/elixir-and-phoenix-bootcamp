@@ -20,5 +20,6 @@ defmodule Cards do
     # in the shell
     # deck = Cards.create_deck
     # Cards.shuffle(deck)
+    # deck var will still be the same as ["Ace","Two","Three"] just using shuffle won't modify the deck variable, this is callED IMMUTABILITY
   end
 end
