@@ -16,8 +16,11 @@ defmodule Cards do
     values = ["Ace","Two","Three","Four","Five"]
     suits = ["Spade","Clubs","Hearts","Dimonds"]
     # list comprehensions
-    for suit <- suits do
-      suit
+    # wrong way to do it
+    for value <- values do
+      for suit <- suits do
+        "#{value} of #{suit}"
+      end
     end
     # iex(5)> Cards.create_deck
     # ["Spade", "Clubs", "Hearts", "Dimonds"] 
