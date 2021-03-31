@@ -13,7 +13,14 @@ defmodule Cards do
 
   """
   def create_deck do
-    ["Ace","Two","Three"]
+    values = ["Ace","Two","Three","Four","Five"]
+    suits = ["Spade","Clubs","Hearts","Dimonds"]
+    # list comprehensions
+    for suit <- suits do
+      suit
+    end
+    # iex(5)> Cards.create_deck
+    # ["Spade", "Clubs", "Hearts", "Dimonds"] 
   end
   def shuffle(deck) do
     Enum.shuffle(deck)
