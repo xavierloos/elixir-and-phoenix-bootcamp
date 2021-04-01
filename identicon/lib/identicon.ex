@@ -2,6 +2,7 @@ defmodule Identicon do
   def main(input) do
     input
     |>hash_input
+    |>pick_color
   end
   # convert the string that's  going to be passed into a series of unique numbers
   # iex(1)> hash = :crypto.hash(:md5, "banana")
@@ -20,6 +21,14 @@ defmodule Identicon do
 
   # Generate the colors: to do this, just take the first three numbers on the list return in the hash which is a RGB form value
   # Each square in the Identicon grid has a number, if the number is ODD we will NOT color that square.
+  def  pick_color(image) do
+    # Use pathern matching
+    %Identicon.Image{hex:  [r, g, b | _tail]} = image
+    # Use | _tail so you define that you don't care about the other values of the array
+    [r, g ,b]
+    # iex(6)> Identicon.main("javi")
+    # [161, 79, 138]
+  end
 
 
 end
