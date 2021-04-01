@@ -40,7 +40,7 @@ defmodule Identicon do
   end
 
   def build_grid(%Identicon.Image{hex: hex} = image) do
-    hex
+    grid = hex
     |>Enum.chunk(3) 
     |>Enum.map(&mirrow_row/1)
     # iex(36)> Identicon.main("Javi")
@@ -50,6 +50,9 @@ defmodule Identicon do
     #   [10, 239, 2, 239, 10],
     #   [240, 20, 139, 20, 240]
     # ]
+    |> List.flatten
+    |>Enum.with_index
+    %Identicon.Image{image | grid: grid}
   end
 
   def mirrow_row(row) do
