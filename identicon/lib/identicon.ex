@@ -6,6 +6,8 @@ defmodule Identicon do
     |>build_grid
     |>filter_odd
     |>build_pixel
+    |>draw_image
+    |>save(input)
   end
   # convert the string that's  going to be passed into a series of unique numbers
   # iex(1)> hash = :crypto.hash(:md5, "banana")
@@ -87,5 +89,18 @@ defmodule Identicon do
       {top_left, bottom_rigth}
     end
     %Identicon.Image{image | pixel: pixel}
+  end
+
+  def draw_image(%Identicon.Image{color: color, pixel: pixel}) do
+    image = :egd.create(250, 250)
+    fill = :egd.color(color)
+    Enum.each pixel, fn({start, stop}) ->
+      :egd.filledRectangle(image, start, stop, fill)
+    end
+    :egd.render(image)
+  end
+
+  def save(image, input) do
+    File.write("#{input}.png", image)
   end
 end

@@ -42,3 +42,9 @@ Flow of the application
 We will get a string and we'll pass it to a series of individual functions and organize them toguether to return an image.
 
 <img src="img/process.png" width="50%" alt="Flow">
+
+## Final result
+
+Identicon generated for the name "javi"
+
+<img src="javi.png" width="50%" alt="Identicon">
