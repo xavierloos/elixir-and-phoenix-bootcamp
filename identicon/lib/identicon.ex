@@ -79,6 +79,13 @@ defmodule Identicon do
   # Once it's created we can fill the image 
   # We need to generate the starting and ending point 
   def  build_pixel(%Identicon.Image{grid: grid} = image) do
-  
+    pixel = Enum.map grid, fn({_code, index}) ->
+      horizontal = rem(index, 5) * 50
+      vertical = div(index, 5) * 50
+      top_left = {horizontal, vertical}
+      bottom_rigth = {horizontal + 50, vertical + 50}
+      {top_left, bottom_rigth}
+    end
+    %Identicon.Image{image | pixel: pixel}
   end
 end
