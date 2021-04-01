@@ -58,4 +58,18 @@ defmodule CardsTest do
   # %{primary: "red"}
   # iex(21)> 
 
+  # KEYWORDS LIST
+  # iex(23)> colors = [{:primary, "red"},{:secondary, "gren"}] 
+  # [primary: "red", secondary: "gren"]
+  # iex(24)> colors[:primary]
+  # "red"
+  # iex(25)> colors = [primary: "red", secondary: "green"]
+  # [primary: "red", secondary: "green"]
+  # iex(26)> colors = %{primary: "red", primary: "blue"}
+  # warning: key :primary will be overridden in map
+  #   iex:26
+  # %{primary: "blue"}
+  # iex(27)> colors = [primary: "red", primary: "green"]
+  # [primary: "red", primary: "green"]
+
 end
