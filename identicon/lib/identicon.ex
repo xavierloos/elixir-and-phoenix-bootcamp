@@ -5,6 +5,7 @@ defmodule Identicon do
     |>pick_color
     |>build_grid
     |>filter_odd
+    |>build_pixel
   end
   # convert the string that's  going to be passed into a series of unique numbers
   # iex(1)> hash = :crypto.hash(:md5, "banana")
@@ -73,4 +74,11 @@ defmodule Identicon do
     %Identicon.Image{image | grid:  grid}
   end
 
+  # ENLANG EDG
+  # We need to create a blank image
+  # Once it's created we can fill the image 
+  # We need to generate the starting and ending point 
+  def  build_pixel(%Identicon.Image{grid: grid} = image) do
+  
+  end
 end
