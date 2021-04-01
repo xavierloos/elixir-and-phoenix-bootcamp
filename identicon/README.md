@@ -37,3 +37,8 @@ Flow of the application
 
 <img src="img/flow.png" width="50%" alt="Flow">
 
+## Generation process
+
+We will get a string and we'll pass it to a series of individual functions and organize them toguether to return an image.
+
+<img src="img/process.png" width="50%" alt="Flow">
