@@ -3,6 +3,7 @@ defmodule Identicon do
     input
     |>hash_input
     |>pick_color
+    |>build_grid
   end
   # convert the string that's  going to be passed into a series of unique numbers
   # iex(1)> hash = :crypto.hash(:md5, "banana")
@@ -36,6 +37,12 @@ defmodule Identicon do
     #   hex: [161, 79, 138, 84, 14, 120, 218, 231,
     #    6, 210, 85, 117, 0, 16, 160, 248]
     # }
+  end
+
+  def build_grid(%Identicon.Image{hex: hex} = image) do
+    hex
+    |>Enum.chunk(3)
+    
   end
 
 
