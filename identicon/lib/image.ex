@@ -3,5 +3,5 @@ defmodule Identicon.Image do
   # Has 2 advantages over Maps: 
   # 1- Assing default values and Additional compile time checking
   # 2- 
-  defstruct hex: nil
+  defstruct hex: nil, color: nil
 end

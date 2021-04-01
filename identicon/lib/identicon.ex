@@ -21,13 +21,21 @@ defmodule Identicon do
 
   # Generate the colors: to do this, just take the first three numbers on the list return in the hash which is a RGB form value
   # Each square in the Identicon grid has a number, if the number is ODD we will NOT color that square.
-  def  pick_color(image) do
+  def  pick_color(%Identicon.Image{hex:  [r, g, b | _tail]} = image) do
     # Use pathern matching
-    %Identicon.Image{hex:  [r, g, b | _tail]} = image
+    
     # Use | _tail so you define that you don't care about the other values of the array
-    [r, g ,b]
+    # [r, g ,b]
     # iex(6)> Identicon.main("javi")
     # [161, 79, 138]
+
+    %Identicon.Image{image | color: {r, g, b}}
+    # iex(12)> Identicon.main("javi")
+    # %Identicon.Image{
+    #   color: {161, 79, 138},
+    #   hex: [161, 79, 138, 84, 14, 120, 218, 231,
+    #    6, 210, 85, 117, 0, 16, 160, 248]
+    # }
   end
 
 
