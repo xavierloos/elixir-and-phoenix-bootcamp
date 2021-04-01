@@ -4,6 +4,7 @@ defmodule Identicon do
     |>hash_input
     |>pick_color
     |>build_grid
+    |>filter_odd
   end
   # convert the string that's  going to be passed into a series of unique numbers
   # iex(1)> hash = :crypto.hash(:md5, "banana")
@@ -62,6 +63,14 @@ defmodule Identicon do
     row ++ [second,first]
     #  Identicon.mirrow_row([20, 195, 204]) 
     # [20, 195, 204, 195, 20]
+  end
+   
+  def filter_odd(%Identicon.Image{grid: grid} = image) do
+    grid = Enum.filter grid, fn({code, _index}) ->
+      rem(code, 2) == 0
+    end
+
+    %Identicon.Image{image | grid:  grid}
   end
 
 end
