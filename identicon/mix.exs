@@ -27,4 +27,7 @@ defmodule Identicon.MixProject do
       {:egd, github: 'erlang/egd'}
     ]
   end
+
+  # install PHOENIX
+  # > mix archive.install hex phx_new 1.5.8
 end
