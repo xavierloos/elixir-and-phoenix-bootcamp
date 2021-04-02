@@ -28,6 +28,7 @@ defmodule Identicon.MixProject do
     ]
   end
 
-  # install PHOENIX
+  # install PHOENIX framework
   # > mix archive.install hex phx_new 1.5.8
+  # and install NODE.JS
 end
