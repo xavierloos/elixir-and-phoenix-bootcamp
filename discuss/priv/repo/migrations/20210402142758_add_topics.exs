@@ -6,4 +6,5 @@ defmodule Discuss.Repo.Migrations.AddTopics do
       add :title, :string
     end
   end
+  # Install POSTICO to see the database
 end
