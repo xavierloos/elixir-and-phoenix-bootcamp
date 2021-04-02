@@ -1,3 +1,3 @@
 defmodule DiscussWeb.LayoutView do
-  use DiscussWeb, :view
+  use DiscussWeb, :view 
 end
