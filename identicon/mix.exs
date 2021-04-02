@@ -31,4 +31,6 @@ defmodule Identicon.MixProject do
   # install PHOENIX framework
   # > mix archive.install hex phx_new 1.5.8
   # and install NODE.JS
+  # Install POSTGRESQL
+  # > brew install postgresql
 end
