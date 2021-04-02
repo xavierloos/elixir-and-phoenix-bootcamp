@@ -33,4 +33,6 @@ defmodule Identicon.MixProject do
   # and install NODE.JS
   # Install POSTGRESQL
   # > brew install postgresql
+
+  # What is phoenix?
 end
