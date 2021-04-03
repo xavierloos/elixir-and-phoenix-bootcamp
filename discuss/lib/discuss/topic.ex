@@ -1,5 +1,6 @@
 defmodule Discuss.Topic do
-  used DiscussWeb, :model
+  use Ecto.Schema
+  import Ecto.Changeset
 
   schema "topics" do
     field :title, :string
