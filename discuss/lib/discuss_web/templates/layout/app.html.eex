@@ -18,6 +18,7 @@
     <nav class="light-blue">
       <div class="nav-wrapper container">
         <a href="/" class="brand-logo">Discussions</a>
+         <a href="/" class="brand-logo">Login</a>
       </div>
     </nav>
     <main role="main" class="container">
