@@ -3,5 +3,5 @@
     <%= text_input f, :title, placeholder: "Title", class: "form-control" %>
     <%= error_tag f, :title%>
   <div>
-  <%= submit "Save topic" class: "btn btn-primary"%>
+  <%= submit "Save topic", class: "btn btn-primary"%>
 <%end%>
