@@ -3,6 +3,7 @@ defmodule DiscussWeb.TopicController do
   # import // Copy and paste the functions from another module
   use DiscussWeb, :controller
   alias DiscussWeb.Topic
+  plug DiscussWeb.Plugs.RequireAuth when action in [:new, :create, :edit, :update, :delete]
 
   def index(conn, _params) do
     topics = Repo.all(Topic)
